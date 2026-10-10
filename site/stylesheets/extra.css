@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Sostenibilidad en Moldeo de Metales y Polímeros - Custom Stylesheet
+   Módulo 1708 · Técnico Superior en Programación de la Producción en Moldeo
+   ========================================================================== */
+
+:root {
+  --md-primary-fg-color: #0f766e;       /* Verde azulado industrial / Tecnologías limpias */
+  --md-primary-fg-color--light: #14b8a6;
+  --md-primary-fg-color--dark: #115e59;
+  --md-accent-fg-color: #0284c7;        /* Azul acero / Metalizado */
+
+  --color-metal: #475569;              /* Gris acero / Aleaciones ligeras */
+  --color-polymer: #d97706;            /* Ámbar / Termoplásticos y procesado térmico */
+  --color-green-proc: #059669;         /* Verde proceso sostenible */
+}
+
+/* 1. Diagramas Mermaid responsivos y adaptados a procesos industriales */
+.mermaid {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.25rem;
+  background-color: var(--md-code-bg-color, #f8fafc);
+  border: 1px solid var(--md-default-fg-color--lightest, #e2e8f0);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+  font-family: var(--md-text-font, inherit) !important;
+}
+
+/* 2. Listas de Definiciones (Definition Lists dl/dt/dd) */
+.md-typeset dl {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.md-typeset dt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--md-primary-fg-color--dark, #115e59);
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset dt::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--md-primary-fg-color, #0f766e);
+  flex-shrink: 0;
+}
+
+.md-typeset dd {
+  margin: 0 0 1.25rem 0;
+  padding: 0.85rem 1.25rem;
+  background: var(--md-code-bg-color, #f8fafc);
+  border-left: 4px solid var(--md-primary-fg-color, #0f766e);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--md-default-fg-color, #334155);
+  line-height: 1.65;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.md-typeset dd p {
+  margin: 0.5rem 0;
+}
+
+.md-typeset dd p:first-child {
+  margin-top: 0;
+}
+
+.md-typeset dd p:last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset dd ol,
+.md-typeset dd ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+/* 3. Estilizado de Admonitions (Callouts) */
+.md-typeset .admonition {
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+  border-width: 0 0 0 4px;
+}
+
+.md-typeset .admonition .admonition-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 4. Tablas técnicas industriales */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest, #e2e8f0);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-code-bg-color, #f1f5f9);
+  color: var(--md-default-fg-color, #0f172a);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest, #f1f5f9);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(15, 118, 110, 0.04);
+}
+
+/* 5. Resaltados semánticos de texto (mark) */
+.md-typeset mark {
+  background-color: #ccfbf1;
+  color: #115e59;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset mark {
+  background-color: rgba(20, 184, 166, 0.25);
+  color: #5eead4;
+}
+
+/* 6. Pestañas de contenido (Content Tabs) */
+.md-typeset .tabbed-set {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin: 1.5rem 0;
+}
+
+/* 7. Badges e insignias de sector */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.badge-polimero {
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.badge-metal {
+  background-color: rgba(71, 85, 105, 0.12);
+  color: #334155;
+  border: 1px solid rgba(71, 85, 105, 0.25);
+}
+
+.badge-ra {
+  background-color: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+  border: 1px solid rgba(15, 118, 110, 0.25);
+}
+
+.badge-valeo {
+  background-color: rgba(2, 132, 199, 0.12);
+  color: #0369a1;
+  border: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+[data-md-color-scheme="slate"] .badge-polimero {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+[data-md-color-scheme="slate"] .badge-metal {
+  background-color: rgba(148, 163, 184, 0.2);
+  color: #cbd5e1;
+}
+
+[data-md-color-scheme="slate"] .badge-ra {
+  background-color: rgba(20, 184, 166, 0.2);
+  color: #5eead4;
+}
+
+[data-md-color-scheme="slate"] .badge-valeo {
+  background-color: rgba(56, 189, 248, 0.2);
+  color: #7dd3fc;
+}
